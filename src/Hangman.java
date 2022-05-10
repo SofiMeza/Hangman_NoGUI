@@ -4,8 +4,8 @@ public class Hangman {
     public static void main(String[] args) {
         char guess = 0;
         boolean keepGoing = true;
-        boolean isInWord = false;
-        boolean isVerified = true;
+        boolean isInWord;
+        boolean isVerified;
         int lives = 5;
         StringBuilder guessedWord = new StringBuilder();
         Scanner scanner = new Scanner(System.in);
@@ -20,9 +20,7 @@ public class Hangman {
         System.out.println("You have 5 lives ! Don't kill the lil man");
         System.out.println();
 
-        for (int i = 0; i < wordToGuess.length(); i++) {
-            guessedWord.append("_");
-        }
+        guessedWord.append("_".repeat(wordToGuess.length()));
 
         System.out.println(guessedWord.toString());
         System.out.println();
