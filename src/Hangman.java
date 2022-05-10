@@ -7,7 +7,6 @@ public class Hangman {
         boolean isInWord = false;
         boolean isVerified = true;
         int lives = 5;
-        int rightCount = 0;
         StringBuilder guessedWord = new StringBuilder();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Insert string  for your friend to guess: ");
@@ -47,7 +46,6 @@ public class Hangman {
             for (int i = 0; i < wordToGuess.length(); i++) {
                 if (wordToGuess.charAt(i) == guess) {
                     guessedWord.setCharAt(i, guess);
-                    rightCount++;
                     isInWord = true;
                 }
             }
